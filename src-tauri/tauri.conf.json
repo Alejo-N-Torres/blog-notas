@@ -1,0 +1,63 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "Blog de Notas",
+    "version": "0.0.3"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "dialog": {
+        "all": true
+      },
+      "path": {
+        "all": true
+      },
+      "fs": {
+        "readFile": true,
+        "removeFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "createDir": true,
+        "scope": ["$DOCUMENT/**/**"]
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "blog.notas",
+      "icon": [
+        "icons/logo-128.png",
+        "icons/logo-96.png",
+        "icons/logo-72.png",
+        "icons/logo-64.png",
+        "icons/logo-48.png",
+        "icons/logo-32.png",
+        "icons/ico-logo-128.ico",
+        "icons/ico-logo-96.ico",
+        "icons/ico-logo-72.ico",
+        "icons/ico-logo-64.ico",
+        "icons/ico-logo-48.ico",
+        "icons/ico-logo-32.ico",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "Blog de Notas",
+        "width": 800,
+        "height": 600
+      }
+    ]
+  }
+}
